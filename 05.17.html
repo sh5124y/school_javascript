@@ -1,0 +1,86 @@
+<script type="text/javascript">
+
+// //sumAll 함수 작성	
+// 	function sumAll(number){ //걍 배열이라 안말하고 보내줘도 됨
+// 		let sum=0;
+// 		for(let i=0; i<number.length; i++)
+// 			sum+=number[i];
+// 		return sum;
+// 	}
+
+// 	const r = sumAll([1,2,3]);
+// 	console.log(r);
+
+// //filter
+// function filter(num, del){
+// 	let farr = [];
+// 	for(let i=0; i<num.length; i++){
+//  			if(num[i] !== del)
+//  				farr.push(num[i])
+// 	}	
+//  			return farr;
+// }
+
+// function filter2(num, del){
+// 	let farr = [];
+
+// 	for(let i=0; i<num.length; i++){
+// 		let found = false;
+// 		for(let j = 0; j<num.length; j++){
+//  			if(num[i] === del[j]){
+//  				found = true;
+//  				break;
+//  			}	
+// 		}
+//  			if(!found)
+//  				farr.push(num[i]);
+// 	}
+// 	return farr;
+// }
+
+// const result1 = filter([1,2,3],2);
+// const result2 = filter2([1,2,3,3,5,2],[2,3]);
+
+// console.log(result1);
+// console.log(result2);
+
+
+// //move
+// function move(p, x, y){
+// 	return { //한번에 반환
+// 		x: p.x+x,
+// 		y: p.y+y
+// 	}
+// }
+
+// let p1 = {x:0, y:2};
+// let p2 = move(p1, 3, 4);
+
+// console.log(p2);
+
+// //swap
+// function swap(o){
+// 	const o3={};
+// 	for(let key in o){
+// 		const value = o[key];
+
+// 	}
+// 	return o3;
+// }
+
+// const o1 = {"a":"B","c":"D"}
+// const o2 = swap(o1);
+// console.log(o2);
+
+//chunck
+function chunck (arr,s){
+	let arr2 = [];
+	for(let i=0; i<arr.length; i+=s){
+		arr2.push( arr.slice(i, i+s));
+	}
+	return arr2;
+}
+
+const r = chunck([1,2,3,4,5],2);
+console.log(r);
+</script>

@@ -1,0 +1,88 @@
+<script type="text/javascript">
+	// function showMessage(){
+	// 	alert("Hello");
+	// }
+
+	// showMessage();
+
+	// function showMessage(){
+	// 	//함수내부에서 사용할 지역 변수 선언
+	// 	let message = "HEllo";
+	// 	//함수 내부에서만 message 접근 가능
+	// 	alert(message);
+	// }
+	// showMessage();
+
+	// let userName = "John"
+	//  function showMessage(){
+	//  	let message = "Hello, "+ userName;
+	//  	alert(message);
+	//  	userName = "Bob";
+	//  }
+
+	// showMessage();
+	// alert(userName);
+
+
+	// function showMessage(from,text){
+	// 	alert(from +':'+text);
+	// }
+	//showMessage("hann","hello");
+	//오류 안난다 조심해라
+	//showMessage("hann");//hann:undifined
+	//showMessage();//undifined:undifined
+	//showMessage("hann","hello","ㅁㄴㅇㄹ");//뒤에 있는거 그냥 무시
+
+	// // 값 매개변수에서 주기
+	// function showMessage(from,text="no text given"){
+	// 	alert(from+": "+text);
+	// }
+	// showMessage("asdf","asfd");
+
+	//function sum(a,b){
+	//	return a+b;
+	//}
+	//let r = sum(4,5);
+	//alert(r);
+
+	// function doNothing(){
+	// 	//return;
+	// }
+	// let r2 = doNothing();
+	// alert(r2);//undifined
+
+	// let r3 = alert("hello");
+	// alert(r3); //저게 =>undefined 라면 alert함수는 반환형이 없다
+/*
+	// //변수에 대입하기 함수에 이름이 없어서 익명함수
+	 let sayHi = function(){
+	 	alert("hello");
+	 };
+
+	// sayHi();
+	//let func = sayHi;
+	let func = sayHi();
+	func();
+
+	/*
+	let sum = function(a,b){
+		return a+b;
+	}
+	let sumresult = sum(4,5);
+	alert(sumresult);
+*/
+
+function ask(question, yes, no) {
+if (confirm(question)) yes()
+else no();
+}
+function showOk() {
+alert( "동의하셨습니다." );
+}
+function showCancel() {
+alert( "취소 버튼을 누르셨습니다." );
+}
+// 사용법: 함수 showOk와 showCancel가 ask 함수의 인수로 전달됨
+ask("동의하십니까?", showOk, showCancel);
+
+</script>

@@ -1,0 +1,30 @@
+<script type="text/javascript">
+
+// function compareNumeric(a, b) {
+//     if (a > b) return 1;
+//     if (a == b) return 0;
+//     if (a < b) return -1;
+// }
+
+
+// let arr = [ 1, 7, 2, 15 ];
+// arr.sort ((a, b) => b - a); //내림차순 정렬
+// //arr.sort ((a, b) => a - b);  //오름차순 정렬
+
+// //arr.sort(compareNumeric);
+// // 1, 2, 15
+// console.log(arr);
+
+// Q1) 영화 제목 길이 오름차순으로 정렬 
+let movies = ["누구를 위하여 종은 울리나", "기생충", "패왕별희", "북북서로 진로를 돌려라", "시"];
+
+movies.sort ((a, b) => a.length - b.length); 
+console.log(movies);
+
+// Q2) 학생 점수 내림차순으로 정렬
+let students = [{ name: "김철수", score: 100 }, { name: "유미림", score: 80 }, { name: "박영희", score: 90 }];
+
+students.sort ((a, b) => b.name.codePointAt(0) - a.name.codePointAt(0)); 
+console.log(students);
+
+</script>

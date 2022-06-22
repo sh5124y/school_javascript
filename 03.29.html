@@ -1,0 +1,184 @@
+<script type="">
+	
+	// let user = {};
+
+	// console.log(user.noSuchProp);
+
+	// 있는지 없는지 검사하는거
+	// let user = {name : "John"};
+	// console.log("name" in user);
+	// console.log("naafsd" in user);
+
+	// let user = {
+	// 	name : "John",
+	// 	age : 30,
+	// 	isAdmin : true
+	// };
+
+	// for(let key in user){
+	// 	console.log(key);
+	// 	console.log(user[key]);
+
+	//}
+
+	// let message="Hello!";
+	// // 원시값대입으로인하여값의복사가발생
+	// let phrase=message;
+	// phrase = "Bye";
+
+	// let user= { name: "John" };
+
+	// user.name = "ken";
+	// console.log(user.name);//ken
+
+	// function changeName(user){
+	// 	//원본객체에 영향ㅇ르 끼침
+	// 	user.name="pete";
+	// }
+	// changeName(admin);
+	// console.log(user.name);
+
+	// let a = {};
+	// let b = a;
+
+	// //같은 객체를 가리키고 있기 때문
+	// console.log(a==b); //true
+	// console.log(a===b); //true
+
+	// let c = {};
+	// let d = {};
+
+	// //주소값이 달라서
+	// console.log(c===d); //f
+	// console.log({}==={});  //f
+
+
+	// function copy(target){
+	// 	let user = {};
+
+	// 	for(let key in target){
+	// 		user[key] = target[key];
+	// 	}
+
+	// 	return user;
+	// }
+
+	// let o = {name : "John", age : 20};
+
+	// //shallow copy
+	// let c = user; //주소값 복사 , 내용바꾸면 바뀜
+
+	// //deep copy
+	// let copied = copy(o); //내용전체 새로운곳에 복사
+
+	// console.log(o === copied);
+	// copied.name = "ken";
+	// console.log(o.name); //john
+
+
+	// let user = {
+	// 	name : "sad",
+	// 	age : 20
+	// }
+
+	// // user.sayHi = function(){
+	// // 	alert("ㄴㅇㄻ")
+	// // };
+	// sayHi(){
+	// 	alert("asdf");
+	// }
+
+	// user.sayHi;
+
+// 	let user= {
+// 		name: "John",
+// 		age: 30,
+// 		sayHi() {
+// 	// 이예제에서 this는 "현재객체"를나타냄
+// 	alert(this.name);   
+// 	 }
+// };
+// 	// John 출력
+// 	user.sayHi();
+
+// let user= { name: "John" };
+// let admin= { name: "Admin" };
+
+// function sayHi() {
+// 	alert( this.name );
+// }
+
+// user.f=sayHi;
+// admin.f=sayHi;
+
+// "use strict"//strict 아니면 전체객체=윈도우 객체
+
+// function sayHi() {
+// alert(this);
+// }
+// // undefined (메소드를호출하는주체가없다고해석)
+// sayHi();
+
+// "use strict"
+// let obj= {
+// x: 100,logThis() {
+// console.log(this);
+//     }
+// };
+// obj.logThis(); // { x: 100 }
+// let another= { y: 200 };
+
+// another.logThis=obj.logThis;
+
+// another.logThis(); // { y: 200 }
+
+// let logThis=another.logThis;
+// logThis(); // 엄격 모드가 적용된 경우 undefined)
+// let o = {
+// 	inner: {
+// 		z: 300
+// 	}
+// };
+// o.inner.logThis = obj.logThis;
+// // 여기서 점 앞의 객체는 o가 아닌 inner임을 유의
+// o.inner.logThis() // { z: 300 }
+
+// 함수의 첫 글자는 대문자
+
+// function User(name) {
+// // (new 연산자와 함께 함수 호출 시) 내부적으로 다음과 같은 코드가 동작
+// // this = {}
+
+// // 새로운 속성을 this에 추가 (생성자 역할 수행)
+
+// this.name = name;
+// this.isAdmin = false;
+
+// // (new 연산자와 함께 함수 호출 시) 내부적으로 다음과 같은 코드가 동작
+// // return this
+// }
+// // new 연산자와 함께 함수 호출
+// let user = new User("Jack");
+// alert(user.name); // Jack
+// alert(user.isAdmin); // false
+
+
+function Student(name, age, gender, number){
+	this.name = name;
+	this.age = age;
+	this.gender = gender;
+	this.number = number;
+	this.sayHi = function(){
+		alert("my name is : "+this.name);
+	}
+}
+
+let student = new Student("yeon", 18, "w", "2108");
+sayHi();
+alert(student.name);
+
+
+
+
+
+</script>

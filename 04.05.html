@@ -1,0 +1,47 @@
+<script type="text/javascript">
+//aeb=>aX10^b
+//3e2 => 3X10^2 =>300
+
+//let a = +prompt("첫번째 숫자 입력");
+
+/*
+while(true){
+
+	let a = +prompt("첫번째 숫자 입력");
+	let b = +prompt("두번째 숫자 입력");
+	sub = a-b;
+
+	if(isNaN(sub)){
+	alert("숫자 다시입력");
+	}
+	else {
+		alert(sub);
+		break;
+	}
+}
+
+//for in 중요
+
+
+let str = 'Widget with id';
+
+alert( str.indexOf('i', 9) ) // 12
+*/
+
+let str = 'As sly as a fox, as strong as an ox';
+let target = 'as';
+let pos = 0;
+
+while (true) {
+    let foundPos = str.indexOf(target, pos);
+    if (foundPos == -1) break;
+
+    alert( `위치: ${foundPos}` );
+    // 다음 위치를 기준으로 검색을 이어갑니다.
+    pos = foundPos + 1;
+}
+
+
+
+</script>
+

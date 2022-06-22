@@ -1,0 +1,73 @@
+<script type="text/javascript">
+
+// for(let i = 44032; i<=45032; i++)
+// {
+// 	let c = String.fromCodePoint(i);
+// 	console.log(c);
+// }
+
+/*
+let arr = ["I", "study", "JavaScript"];
+// 인덱스 1부터 요소 한 개를 제거
+arr.splice(1, 1);
+// ["I", "JavaScript"]
+alert( arr );
+
+let ar = ["I", "study", "JavaScript", "right", "now"];
+// 처음(0) 세 개(3)의 요소를 지우고, 이 자리를 다른 요소로 대체합니다.
+ar.splice(0, 3, "Let's", "dance");
+// now ["Let's", "dance", "right", "now"]
+alert( ar )
+*/
+/*
+let users = [
+    {id: 1, name: "John" , age : 18},
+    {id: 2, name: "Pete", age : 30},
+    {id: 3, name: "Mary", age : 40}
+];
+
+// id가 3보다 작은 모든 사용자 반환 (앞쪽 사용자 두 명을 반환)
+//let someUsers = users.filter(item => item.age >= 20);
+
+let someUsers = users.filter(function(item){//filter은 true false로 넣을지 말지 결정
+ return item.age >= 20
+});
+
+console.log(someUsers);
+alert(someUsers.length); // 2
+
+someUsers.forEach(function(item){
+	console.log(item.name);
+});
+*/
+
+/*
+let arr = [1,2,3,4];
+
+for(let item of arr){
+	console.log(item)
+}
+
+arr.forEach(function(item, idx){
+
+	console.log(item, idx);//위치 고정
+});
+*/
+
+let users = [
+    {id: 1, name: "John" , age : 18},
+    {id: 2, name: "Pete", age : 30},
+    {id: 3, name: "Mary", age : 40}
+];
+
+let someUsers = users.filter(function(item){
+ return item.age >= 20
+});
+
+let userName = someUsers.map(function(item){//map은 1대 1로 변형해주기
+	return item.name;
+
+})
+
+console.log(userName);
+</script>
